@@ -1,6 +1,6 @@
 <robot name="robozero">
     <!--Links Declaration-->
-    <link name="base_link"/>
+    <link name="base_footprint"/>
     <!--body links       x2-->
     <link name="link23">
         <visual>
@@ -25,7 +25,7 @@
             <geometry>
                 <box size="0.0358 0.0196 0.025"/>
             </geometry>
-            <origin xyz="0 -0.009 0.015" rpy="0 0 1.57"/>
+            <origin xyz="0 0 -0.012" rpy="0 1.57 1.57"/>
         </visual>
     </link>
     <link name="link14">
@@ -33,7 +33,7 @@
             <geometry>
                 <box size="0.0358 0.0196 0.025"/>
             </geometry>
-            <origin xyz="0 -0.009 0.015" rpy="0 0 1.57"/>
+            <origin xyz="0.01 0 0.001" rpy="1.57 0 0"/>
         </visual>
     </link>
     <link name="link14F"/>
@@ -42,7 +42,7 @@
             <geometry>
                 <box size="0.0358 0.0196 0.025"/>
             </geometry>
-            <origin xyz="0 -0.009 0.015" rpy="0 0 1.57"/>
+            <origin xyz="0.01 0 -0.013" rpy="0 0 0"/>
         </visual>
     </link>
     <link name="link16">
@@ -50,7 +50,7 @@
             <geometry>
                 <box size="0.0358 0.0196 0.025"/>
             </geometry>
-            <origin xyz="0 -0.009 0.015" rpy="0 0 1.57"/>
+            <origin xyz="0.01 0 0" rpy="1.57 0 0"/>
         </visual>
     </link>
     <link name="link16F"/>
@@ -68,7 +68,7 @@
             <geometry>
                 <box size="0.0358 0.0196 0.025"/>
             </geometry>
-            <origin xyz="0 -0.009 0.015" rpy="0 0 1.57"/>
+            <origin xyz="0 0 -0.012" rpy="0 1.57 1.57"/>
         </visual>
     </link>
     <link name="link19">
@@ -76,7 +76,7 @@
             <geometry>
                 <box size="0.0358 0.0196 0.025"/>
             </geometry>
-            <origin xyz="0 -0.009 0.015" rpy="0 0 1.57"/>
+            <origin xyz="-0.01 0 0.001" rpy="1.57 0 0"/>
         </visual>
     </link>
     <link name="link19F"/>
@@ -85,7 +85,7 @@
             <geometry>
                 <box size="0.0358 0.0196 0.025"/>
             </geometry>
-            <origin xyz="0 -0.009 0.015" rpy="0 0 1.57"/>
+            <origin xyz="-0.01 0 -0.013" rpy="0 0 0"/>
         </visual>
     </link>
     <link name="link21">
@@ -93,7 +93,7 @@
             <geometry>
                 <box size="0.0358 0.0196 0.025"/>
             </geometry>
-            <origin xyz="0 -0.009 0.015" rpy="0 0 1.57"/>
+            <origin xyz="-0.01 0 0" rpy="1.57 0 0"/>
         </visual>
     </link>
     <link name="link21F"/>
@@ -111,7 +111,7 @@
             <geometry>
                 <box size="0.0358 0.0196 0.025"/>
             </geometry>
-            <origin xyz="0 -0.009 0.015" rpy="0 1.57 1.57"/>
+            <origin xyz="0 0 -0.01" rpy="0 1.57 1.57"/>
         </visual>
     </link>
     <link name="link01F"/>
@@ -120,7 +120,7 @@
             <geometry>
                 <box size="0.0358 0.0196 0.025"/>
             </geometry>
-            <origin xyz="0 -0.009 0.015" rpy="1.57 1.57 1.57"/>
+            <origin xyz="0 0 -0.02" rpy="1.57 1.57 1.57"/>
         </visual>
     </link>
     <link name="link03">
@@ -128,7 +128,7 @@
             <geometry>
                 <box size="0.0358 0.0196 0.025"/>
             </geometry>
-            <origin xyz="0 -0.009 0.015" rpy="1.57 1.57 1.57"/>
+            <origin xyz="0 0 -0.012" rpy="1.57 1.57 1.57"/>
         </visual>
     </link>
     <link name="link03F"/>
@@ -137,7 +137,7 @@
             <geometry>
                 <box size="0.0358 0.0196 0.025"/>
             </geometry>
-            <origin xyz="0 -0.009 0.015" rpy="1.57 1.57 1.57"/>
+            <origin xyz="0 0 -0.02" rpy="1.57 1.57 1.57"/>
         </visual>
     </link>
     <link name="link05">
@@ -145,7 +145,7 @@
             <geometry>
                 <box size="0.0358 0.0196 0.025"/>
             </geometry>
-            <origin xyz="0 -0.009 0.015" rpy="1.57 1.57 1.57"/>
+            <origin xyz="0 0 -0.012" rpy="1.57 1.57 1.57"/>
         </visual>
     </link>
     <link name="link05F"/>
@@ -154,7 +154,7 @@
             <geometry>
                 <box size="0.0358 0.0196 0.025"/>
             </geometry>
-            <origin xyz="0 -0.009 0.015" rpy="0 0 1.57"/>
+            <origin xyz="0.005 0 -0.018" rpy="1.57 1.2 0"/>
         </visual>
     </link>
     <!--left  Leg links  x6-->
@@ -163,7 +163,7 @@
             <geometry>
                 <box size="0.0358 0.0196 0.025"/>
             </geometry>
-            <origin xyz="0 -0.009 0.015" rpy="0 1.57 1.57"/>
+            <origin xyz="0 0 -0.01" rpy="0 1.57 1.57"/>
         </visual>
     </link>
     <link name="link07F"/>
@@ -172,7 +172,7 @@
             <geometry>
                 <box size="0.0358 0.0196 0.025"/>
             </geometry>
-            <origin xyz="0 -0.009 0.015" rpy="1.57 1.57 1.57"/>
+            <origin xyz="0 0 -0.02" rpy="1.57 1.57 1.57"/>
         </visual>
     </link>
     <link name="link09">
@@ -180,7 +180,7 @@
             <geometry>
                 <box size="0.0358 0.0196 0.025"/>
             </geometry>
-            <origin xyz="0 -0.009 0.015" rpy="1.57 1.57 1.57"/>
+            <origin xyz="0 0 -0.012" rpy="1.57 1.57 1.57"/>
         </visual>
     </link>
     <link name="link09F"/>
@@ -189,7 +189,7 @@
             <geometry>
                 <box size="0.0358 0.0196 0.025"/>
             </geometry>
-            <origin xyz="0 -0.009 0.015" rpy="1.57 1.57 1.57"/>
+            <origin xyz="0 0 -0.02" rpy="1.57 1.57 1.57"/>
         </visual>
     </link>
     <link name="link11">
@@ -197,7 +197,7 @@
             <geometry>
                 <box size="0.0358 0.0196 0.025"/>
             </geometry>
-            <origin xyz="0 -0.009 0.015" rpy="1.57 1.57 1.57"/>
+            <origin xyz="0 0 -0.012" rpy="1.57 1.57 1.57"/>
         </visual>
     </link>
     <link name="link11F"/>
@@ -206,15 +206,15 @@
             <geometry>
                 <box size="0.0358 0.0196 0.025"/>
             </geometry>
-            <origin xyz="0 -0.009 0.015" rpy="0 0 1.57"/>
+            <origin xyz="-0.005 0 -0.018" rpy="1.57 -1.2 0"/>
         </visual>
     </link>
 
     <!--Joints Declaration-->
     <joint name="joint_base" type="fixed">
-        <parent link="base_link"/>
+        <parent link="base_footprint"/>
         <child  link="link24"/>
-        <origin xyz="0 0 0.2" rpy="0 0 0"/>
+        <origin xyz="0 0 0.28" rpy="0 0 0"/>
     </joint>
 
     <!--Body Joints       x2-->
@@ -238,13 +238,13 @@
     <joint name="joint17-24" type="fixed">
         <parent link="link24"/>
         <child  link="link17"/>
-        <origin xyz="0.01 0 0.0125" rpy="0 0 0"/>
+        <origin xyz="0.015 0 0.018" rpy="0 0 0"/>
     </joint>
 
     <joint name="joint16F-17" type="revolute">
         <parent link="link17"/>
         <child  link="link16F"/>
-        <origin xyz="0.02 0 0" rpy="0 0 0"/>
+        <origin xyz="0.025 0 0" rpy="0 0 0"/>
         <axis xyz="1 0 0"/>
         <limit lower="-2.61799" upper="2.61799" effort="0.05" velocity="0.48"/>
     </joint>
@@ -252,7 +252,7 @@
     <joint name="joint16-16F" type="revolute">
         <parent link="link16F"/>
         <child  link="link16"/>
-        <origin xyz="0.015 0 -0.015" rpy="0 0 0"/>
+        <origin xyz="0.009 0 0.005" rpy="0 0 0"/>
         <axis xyz="0 1 0"/>
         <limit lower="-2.61799" upper="2.61799" effort="0.05" velocity="0.48"/>
     </joint>
@@ -260,13 +260,13 @@
     <joint name="joint15-16" type="fixed">
         <parent link="link16"/>
         <child  link="link15"/>
-        <origin xyz="0 0 -0.01" rpy="0 0 0"/>
+        <origin xyz="0 0 -0.011" rpy="0 0 0"/>
     </joint>
 
     <joint name="joint14F-15" type="revolute">
         <parent link="link15"/>
         <child  link="link14F"/>
-        <origin xyz="0 0 -0.02" rpy="0 0 0"/>
+        <origin xyz="0 0 -0.025" rpy="0 0 0"/>
         <axis xyz="0 0 1"/>
         <limit lower="-2.61799" upper="2.61799" effort="0.05" velocity="0.48"/>
     </joint>
@@ -274,7 +274,7 @@
     <joint name="joint14-14F" type="revolute">
         <parent link="link14F"/>
         <child  link="link14"/>
-        <origin xyz="0 0 -0.015" rpy="0 0 0"/>
+        <origin xyz="-0.005 0 -0.02" rpy="0 0 0"/>
         <axis xyz="0 1 0"/>
         <limit lower="-2.61799" upper="2.61799" effort="0.05" velocity="0.48"/>
     </joint>
@@ -282,20 +282,20 @@
     <joint name="joint13-14" type="fixed">
         <parent link="link14"/>
         <child  link="link13"/>
-        <origin xyz="0 0 -0.01" rpy="0 0 0"/>
+        <origin xyz="0 0 -0.015" rpy="0 0 0"/>
     </joint>
 
     <!--left  Arm joints  x5-->
     <joint name="joint22-24" type="fixed">
         <parent link="link24"/>
         <child  link="link22"/>
-        <origin xyz="-0.01 0 0.0125" rpy="0 0 0"/>
+        <origin xyz="-0.015 0 0.018" rpy="0 0 0"/>
     </joint>
     
     <joint name="joint21F-22" type="revolute">
         <parent link="link22"/>
         <child  link="link21F"/>
-        <origin xyz="-0.02 0 0" rpy="0 0 0"/>
+        <origin xyz="-0.025 0 0" rpy="0 0 0"/>
         <axis xyz="1 0 0"/>
         <limit lower="-2.61799" upper="2.61799" effort="0.05" velocity="0.48"/>
     </joint>
@@ -303,7 +303,7 @@
     <joint name="joint21-21F" type="revolute">
         <parent link="link21F"/>
         <child  link="link21"/>
-        <origin xyz="-0.015 0 -0.015" rpy="0 0 0"/>
+        <origin xyz="-0.009 0 0.005" rpy="0 0 0"/>
         <axis xyz="0 1 0"/>
         <limit lower="-2.61799" upper="2.61799" effort="0.05" velocity="0.48"/>
     </joint>
@@ -311,13 +311,13 @@
     <joint name="joint20-21" type="fixed">
         <parent link="link21"/>
         <child  link="link20"/>
-        <origin xyz="0 0 -0.01" rpy="0 0 0"/>
+        <origin xyz="0 0 -0.011" rpy="0 0 0"/>
     </joint>
 
     <joint name="joint19F-20" type="revolute">
         <parent link="link20"/>
         <child  link="link19F"/>
-        <origin xyz="0 0 -0.02" rpy="0 0 0"/>
+        <origin xyz="0 0 -0.025" rpy="0 0 0"/>
         <axis xyz="0 0 1"/>
         <limit lower="-2.61799" upper="2.61799" effort="0.05" velocity="0.48"/>
     </joint>
@@ -325,7 +325,7 @@
     <joint name="joint19-19F" type="revolute">
         <parent link="link19F"/>
         <child  link="link19"/>
-        <origin xyz="0 0 -0.015" rpy="0 0 0"/>
+        <origin xyz="0.005 0 -0.02" rpy="0 0 0"/>
         <axis xyz="0 1 0"/>
         <limit lower="-2.61799" upper="2.61799" effort="0.05" velocity="0.48"/>
     </joint>
@@ -333,14 +333,14 @@
     <joint name="joint18-19" type="fixed">
         <parent link="link19"/>
         <child  link="link18"/>
-        <origin xyz="0 0 -0.01" rpy="0 0 0"/>
+        <origin xyz="0 0 -0.015" rpy="0 0 0"/>
     </joint>
 
     <!--right Leg joints  x6-->
     <joint name="joint06-23F" type="fixed">
         <parent link="link23F"/>
         <child  link="link06"/>
-        <origin xyz="0.025 -0.03 -0.015" rpy="0 0 0"/>
+        <origin xyz="0.01 -0.03 -0.015" rpy="0 0 0"/>
     </joint>
 
     <joint name="joint05F-06" type="revolute">
@@ -354,7 +354,7 @@
     <joint name="joint05-05F" type="revolute">
         <parent link="link05F"/>
         <child  link="link05"/>
-        <origin xyz="0 0.015 0" rpy="0 0 0"/>
+        <origin xyz="0 0.025 0" rpy="0 0 0"/>
         <axis xyz="1 0 0"/>
         <limit lower="-2.61799" upper="2.61799" effort="0.05" velocity="0.48"/>
     </joint>
@@ -376,7 +376,7 @@
     <joint name="joint03-03F" type="revolute">
         <parent link="link03F"/>
         <child  link="link03"/>
-        <origin xyz="0 0 -0.03" rpy="0 0 0"/>
+        <origin xyz="0 0 -0.038" rpy="0 0 0"/>
         <axis xyz="1 0 0"/>
         <limit lower="-2.61799" upper="2.61799" effort="0.05" velocity="0.48"/>
     </joint>
@@ -407,7 +407,7 @@
     <joint name="joint12-23F" type="fixed">
         <parent link="link23F"/>
         <child  link="link12"/>
-        <origin xyz="-0.025 -0.03 -0.015" rpy="0 0 0"/>
+        <origin xyz="-0.01 -0.03 -0.015" rpy="0 0 0"/>
     </joint>
 
     <joint name="joint11F-12" type="revolute">
@@ -421,7 +421,7 @@
     <joint name="joint11-11F" type="revolute">
         <parent link="link11F"/>
         <child  link="link11"/>
-        <origin xyz="0 0.015 0" rpy="0 0 0"/>
+        <origin xyz="0 0.025 0" rpy="0 0 0"/>
         <axis xyz="1 0 0"/>
         <limit lower="-2.61799" upper="2.61799" effort="0.05" velocity="0.48"/>
     </joint>
@@ -443,7 +443,7 @@
     <joint name="joint09-09F" type="revolute">
         <parent link="link09F"/>
         <child  link="link09"/>
-        <origin xyz="0 0 -0.03" rpy="0 0 0"/>
+        <origin xyz="0 0 -0.038" rpy="0 0 0"/>
         <axis xyz="1 0 0"/>
         <limit lower="-2.61799" upper="2.61799" effort="0.05" velocity="0.48"/>
     </joint>
