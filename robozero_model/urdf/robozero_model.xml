@@ -19,6 +19,7 @@
             <mass value="0.021"/>
             <inertia    ixx="0.00006" iyy="0.00004" izz="0.00007"
                         ixy="0.00005" ixz="0.00005" iyz="0.00005" />
+            <origin xyz="0 -0.009 -0.01" rpy="1.57 0 1.57"/>
         </inertial>
     </link>
     <link name="link23F"/>
@@ -39,6 +40,7 @@
             <mass value="0.021"/>
             <inertia    ixx="0.00006" iyy="0.00004" izz="0.00007"
                         ixy="0.00005" ixz="0.00005" iyz="0.00005" />
+            <origin xyz="0 -0.009 0.015" rpy="0 0 1.57"/>
         </inertial>
     </link>
     <!--right Arm links  x5-->
@@ -59,6 +61,7 @@
             <mass value="0.021"/>
             <inertia    ixx="0.00006" iyy="0.00004" izz="0.00007"
                         ixy="0.00005" ixz="0.00005" iyz="0.00005" />
+            <origin xyz="0 0 -0.012" rpy="0 1.57 1.57"/>
         </inertial>
     </link>
     <link name="link14">
@@ -78,6 +81,7 @@
             <mass value="0.021"/>
             <inertia    ixx="0.00006" iyy="0.00004" izz="0.00007"
                         ixy="0.00005" ixz="0.00005" iyz="0.00005" />
+            <origin xyz="0.01 0 0.001" rpy="1.57 0 0"/>
         </inertial>
     </link>
     <link name="link14F"/>
@@ -98,6 +102,7 @@
             <mass value="0.021"/>
             <inertia    ixx="0.00006" iyy="0.00004" izz="0.00007"
                         ixy="0.00005" ixz="0.00005" iyz="0.00005" />
+            <origin xyz="0.01 0 -0.013" rpy="0 0 0"/>
         </inertial>
     </link>
     <link name="link16">
@@ -117,6 +122,7 @@
             <mass value="0.021"/>
             <inertia    ixx="0.00006" iyy="0.00004" izz="0.00007"
                         ixy="0.00005" ixz="0.00005" iyz="0.00005" />
+            <origin xyz="0.01 0 0" rpy="1.57 0 0"/>
         </inertial>
     </link>
     <link name="link16F"/>
@@ -137,6 +143,7 @@
             <mass value="0.021"/>
             <inertia    ixx="0.00006" iyy="0.00004" izz="0.00007"
                         ixy="0.00005" ixz="0.00005" iyz="0.00005" />
+            <origin xyz="0.01 -0.009 0" rpy="1.57 0 1.57"/>
         </inertial>
     </link>
     <!--left  Arm links  x5-->
@@ -157,6 +164,7 @@
             <mass value="0.021"/>
             <inertia    ixx="0.00006" iyy="0.00004" izz="0.00007"
                         ixy="0.00005" ixz="0.00005" iyz="0.00005" />
+            <origin xyz="0 0 -0.012" rpy="0 1.57 1.57"/>
         </inertial>
     </link>
     <link name="link19">
@@ -170,12 +178,13 @@
             <geometry>
                 <box size="0.0358 0.0196 0.025"/>
             </geometry>
-            <origin xyz="-0.01 0 -0.001" rpy="1.57 0 0"/>
+            <origin xyz="-0.01 0 0.001" rpy="1.57 0 0"/>
         </collision>
         <inertial>
             <mass value="0.021"/>
             <inertia    ixx="0.00006" iyy="0.00004" izz="0.00007"
                         ixy="0.00005" ixz="0.00005" iyz="0.00005" />
+            <origin xyz="-0.01 0 0.001" rpy="1.57 0 0"/>
         </inertial>
     </link>
     <link name="link19F"/>
@@ -196,6 +205,7 @@
             <mass value="0.021"/>
             <inertia    ixx="0.00006" iyy="0.00004" izz="0.00007"
                         ixy="0.00005" ixz="0.00005" iyz="0.00005" />
+            <origin xyz="-0.01 0 -0.013" rpy="0 0 0"/>
         </inertial>
     </link>
     <link name="link21">
@@ -215,6 +225,7 @@
             <mass value="0.021"/>
             <inertia    ixx="0.00006" iyy="0.00004" izz="0.00007"
                         ixy="0.00005" ixz="0.00005" iyz="0.00005" />
+            <origin xyz="-0.01 0 0" rpy="1.57 0 0"/>
         </inertial>
     </link>
     <link name="link21F"/>
@@ -235,6 +246,7 @@
             <mass value="0.021"/>
             <inertia    ixx="0.00006" iyy="0.00004" izz="0.00007"
                         ixy="0.00005" ixz="0.00005" iyz="0.00005" />
+            <origin xyz="-0.01 -0.009 0" rpy="1.57 0 1.57"/>
         </inertial>
     </link>
     <!--right Leg links  x6-->
@@ -255,6 +267,7 @@
             <mass value="0.021"/>
             <inertia    ixx="0.00006" iyy="0.00004" izz="0.00007"
                         ixy="0.00005" ixz="0.00005" iyz="0.00005" />
+            <origin xyz="0 0 -0.01" rpy="0 1.57 1.57"/>
         </inertial>
     </link>
     <link name="link01F"/>
@@ -275,6 +288,7 @@
             <mass value="0.021"/>
             <inertia    ixx="0.00006" iyy="0.00004" izz="0.00007"
                         ixy="0.00005" ixz="0.00005" iyz="0.00005" />
+            <origin xyz="0 0 -0.02" rpy="1.57 1.57 1.57"/>
         </inertial>
     </link>
     <link name="link03">
@@ -294,6 +308,7 @@
             <mass value="0.021"/>
             <inertia    ixx="0.00006" iyy="0.00004" izz="0.00007"
                         ixy="0.00005" ixz="0.00005" iyz="0.00005" />
+            <origin xyz="0 0 -0.012" rpy="1.57 1.57 1.57"/>
         </inertial>
     </link>
     <link name="link03F"/>
@@ -314,6 +329,7 @@
             <mass value="0.021"/>
             <inertia    ixx="0.00006" iyy="0.00004" izz="0.00007"
                         ixy="0.00005" ixz="0.00005" iyz="0.00005" />
+            <origin xyz="0 0 -0.02" rpy="1.57 1.57 1.57"/>
         </inertial>
     </link>
     <link name="link05">
@@ -333,6 +349,7 @@
             <mass value="0.021"/>
             <inertia    ixx="0.00006" iyy="0.00004" izz="0.00007"
                         ixy="0.00005" ixz="0.00005" iyz="0.00005" />
+            <origin xyz="0 0 -0.012" rpy="1.57 1.57 1.57"/>
         </inertial>
     </link>
     <link name="link05F"/>
@@ -353,6 +370,7 @@
             <mass value="0.021"/>
             <inertia    ixx="0.00006" iyy="0.00004" izz="0.00007"
                         ixy="0.00005" ixz="0.00005" iyz="0.00005" />
+            <origin xyz="0.005 0 -0.018" rpy="1.57 1.2 0"/>
         </inertial>
     </link>
     <!--left  Leg links  x6-->
@@ -373,6 +391,7 @@
             <mass value="0.021"/>
             <inertia    ixx="0.00006" iyy="0.00004" izz="0.00007"
                         ixy="0.00005" ixz="0.00005" iyz="0.00005" />
+            <origin xyz="0 0 -0.01" rpy="0 1.57 1.57"/>
         </inertial>
     </link>
     <link name="link07F"/>
@@ -393,6 +412,7 @@
             <mass value="0.021"/>
             <inertia    ixx="0.00006" iyy="0.00004" izz="0.00007"
                         ixy="0.00005" ixz="0.00005" iyz="0.00005" />
+            <origin xyz="0 0 -0.02" rpy="1.57 1.57 1.57"/>
         </inertial>
     </link>
     <link name="link09">
@@ -412,6 +432,7 @@
             <mass value="0.021"/>
             <inertia    ixx="0.00006" iyy="0.00004" izz="0.00007"
                         ixy="0.00005" ixz="0.00005" iyz="0.00005" />
+            <origin xyz="0 0 -0.012" rpy="1.57 1.57 1.57"/>
         </inertial>
     </link>
     <link name="link09F"/>
@@ -432,6 +453,7 @@
             <mass value="0.021"/>
             <inertia    ixx="0.00006" iyy="0.00004" izz="0.00007"
                         ixy="0.00005" ixz="0.00005" iyz="0.00005" />
+            <origin xyz="0 0 -0.02" rpy="1.57 1.57 1.57"/>
         </inertial>
     </link>
     <link name="link11">
@@ -451,6 +473,7 @@
             <mass value="0.021"/>
             <inertia    ixx="0.00006" iyy="0.00004" izz="0.00007"
                         ixy="0.00005" ixz="0.00005" iyz="0.00005" />
+            <origin xyz="0 0 -0.012" rpy="1.57 1.57 1.57"/>
         </inertial>
     </link>
     <link name="link11F"/>
@@ -471,6 +494,7 @@
             <mass value="0.021"/>
             <inertia    ixx="0.00006" iyy="0.00004" izz="0.00007"
                         ixy="0.00005" ixz="0.00005" iyz="0.00005" />
+            <origin xyz="-0.005 0 -0.018" rpy="1.57 -1.2 0"/>
         </inertial>
     </link>
 
