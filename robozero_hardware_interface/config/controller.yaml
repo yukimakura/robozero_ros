@@ -1,0 +1,101 @@
+robozero:
+  joint23_24_ctrl:
+    type: position_controllers/JointPositionController
+    joint: joint23_24
+    pid:
+      p: 3.0
+
+  joint16_17_ctrl:
+    type: position_controllers/JointPositionController
+    joint: joint16_17
+    pid:
+      p: 3.0
+  joint15_16_ctrl:
+    type: position_controllers/JointPositionController
+    joint: joint15_16
+    pid:
+      p: 3.0
+  joint14_15_ctrl:
+    type: position_controllers/JointPositionController
+    joint: joint14_15
+    pid:
+      p: 3.0
+  joint13_14_ctrl:
+    type: position_controllers/JointPositionController
+    joint: joint13_14
+    pid:
+      p: 3.0
+
+  joint21_22_ctrl:
+    type: position_controllers/JointPositionController
+    joint: joint21_22
+    pid:
+      p: 3.0
+  joint20_21_ctrl:
+    type: position_controllers/JointPositionController
+    joint: joint20_21
+    pid:
+      p: 3.0
+  joint19_20_ctrl:
+    type: position_controllers/JointPositionController
+    joint: joint19_20
+    pid:
+      p: 3.0
+  joint18_19_ctrl:
+    type: position_controllers/JointPositionController
+    joint: joint18_19
+    pid:
+      p: 3.0
+
+  joint05_06_ctrl:
+    type: position_controllers/JointPositionController
+    joint: joint05_06
+    pid:
+      p: 3.0
+  joint04_05_ctrl:
+    type: position_controllers/JointPositionController
+    joint: joint04_05
+    pid:
+      p: 3.0
+  joint03_04_ctrl:
+    type: position_controllers/JointPositionController
+    joint: joint03_04
+    pid:
+      p: 3.0
+  joint02_03_ctrl:
+    type: position_controllers/JointPositionController
+    joint: joint02_03
+    pid:
+      p: 3.0
+  joint01_02_ctrl:
+    type: position_controllers/JointPositionController
+    joint: joint01_02
+    pid:
+      p: 3.0
+
+  joint11_12_ctrl:
+    type: position_controllers/JointPositionController
+    joint: joint11_12
+    pid:
+      p: 3.0
+  joint10_11_ctrl:
+    type: position_controllers/JointPositionController
+    joint: joint10_11
+    pid:
+      p: 3.0
+  joint09_10_ctrl:
+    type: position_controllers/JointPositionController
+    joint: joint09_10
+    pid:
+      p: 3.0
+  joint08_09_ctrl:
+    type: position_controllers/JointPositionController
+    joint: joint08_09
+    pid:
+      p: 3.0
+  joint07_08_ctrl:
+    type: position_controllers/JointPositionController
+    joint: joint07_08
+    pid:
+      p: 3.0
+  

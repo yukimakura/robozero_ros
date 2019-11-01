@@ -27,47 +27,36 @@
     </xacro:macro> 
 
     <xacro:servo linkname="link23" xyz="0 -0.009 -0.01" rpy="1.57 0 1.57" />
-    <link name="link23F"/>
     <xacro:servo linkname="link24" xyz="0 -0.009 0.015" rpy="0 0 1.57" />
     
     <!--right Arm links  x5-->
     <xacro:servo linkname="link13" xyz="0 0 -0.012" rpy="0 1.57 1.57" />
     <xacro:servo linkname="link14" xyz="0.01 0 0.001" rpy="1.57 0 0" />
-    <link name="link14F"/>
     <xacro:servo linkname="link15" xyz="0.01 0 -0.013" rpy="0 0 0" />
     <xacro:servo linkname="link16" xyz="0.01 0 0" rpy="1.57 0 0" />
-    <link name="link16F"/>
     <xacro:servo linkname="link17" xyz="0.01 -0.009 0" rpy="1.57 0 1.57" />
 
     <!--left  Arm links  x5-->
     <xacro:servo linkname="link18" xyz="0 0 -0.012" rpy="0 1.57 1.57" />
     <xacro:servo linkname="link19" xyz="-0.01 0 0.001" rpy="1.57 0 0" />
-    <link name="link19F"/>
     <xacro:servo linkname="link20" xyz="-0.01 0 -0.013" rpy="0 0 0" />
     <xacro:servo linkname="link21" xyz="-0.01 0 0" rpy="1.57 0 0" />
-    <link name="link21F"/>
     <xacro:servo linkname="link22" xyz="-0.01 -0.009 0" rpy="1.57 0 1.57" />
 
     <!--right Leg links  x6-->
     <xacro:servo linkname="link01" xyz="0 0 -0.01" rpy="0 1.57 1.57" />
-    <link name="link01F"/>
     <xacro:servo linkname="link02" xyz="0 0 -0.02" rpy="1.57 1.57 1.57" />
     <xacro:servo linkname="link03" xyz="0 0 -0.012" rpy="1.57 1.57 1.57" />
-    <link name="link03F"/>
     <xacro:servo linkname="link04" xyz="0 0 -0.02" rpy="1.57 1.57 1.57" />
     <xacro:servo linkname="link05" xyz="0 0 -0.012" rpy="1.57 1.57 1.57" />
-    <link name="link05F"/>
     <xacro:servo linkname="link06" xyz="0.005 0 -0.018" rpy="1.57 1.2 0" />
     
     <!--left  Leg links  x6-->
     <xacro:servo linkname="link07" xyz="0 0 -0.01" rpy="0 1.57 1.57" />
-    <link name="link07F"/>
     <xacro:servo linkname="link08" xyz="0 0 -0.02" rpy="1.57 1.57 1.57" />
     <xacro:servo linkname="link09" xyz="0 0 -0.012" rpy="1.57 1.57 1.57" />
-    <link name="link09F"/>
     <xacro:servo linkname="link10" xyz="0 0 -0.02" rpy="1.57 1.57 1.57" />
     <xacro:servo linkname="link11" xyz="0 0 -0.012" rpy="1.57 1.57 1.57" />
-    <link name="link11F"/>
     <xacro:servo linkname="link12" xyz="-0.005 0 -0.018" rpy="1.57 -1.2 0" />
 
     <!--Joints Declaration-->
@@ -81,15 +70,15 @@
             <limit lower="-2.61799" upper="2.61799" effort="0.05" velocity="0.48"/>
         </joint>
 
-        <transmission name="${jointname}_tran">
-        <type>transmission_interface/SimpleTransmission</type>
-        <joint name="${jointname}">
-            <hardwareInterface>PositionActuatorInterface</hardwareInterface>
-        </joint>
-        <actuator name="${jointname}_motor">
-            <hardwareInterface>PositionActuatorInterface</hardwareInterface>
-            <mechanicalReduction>1</mechanicalReduction>
-        </actuator>
+        <transmission name="${jointname}_trans">
+            <type>transmission_interface/SimpleTransmission</type>
+            <joint name="${jointname}">
+                <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+            </joint>
+            <actuator name="${jointname}_motor">
+                <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+                <mechanicalReduction>1</mechanicalReduction>
+            </actuator>
         </transmission>
     </xacro:macro> 
 
@@ -104,53 +93,45 @@
     <xacro:joint_fixed jointname="joint_base" parent="base_footprint" child="link24" xyz="0 0 0.28" />
 
     <!--Body Joints       x2-->
-    <xacro:joint_revolute jointname="joint23-24" parent="link24" child="link23" xyz="0 0 0" asix="0 0 1"/>
-    <xacro:joint_revolute jointname="joint23F-23" parent="link23" child="link23F" xyz="0 0 -0.01" asix="1 0 0"/>
+    <xacro:joint_revolute jointname="joint23_24" parent="link24" child="link23" xyz="0 0 0" asix="0 0 1"/>
+    <!-- <xacro:joint_revolute jointname="joint23_23" parent="link23" child="link23" xyz="0 0 -0.01" asix="1 0 0"/> -->
 
     <!--right Arm Joints  x5-->
-    <xacro:joint_fixed jointname="joint17-24" parent="link24" child="link17" xyz="0.015 0 0.018" />
-    <xacro:joint_revolute jointname="joint16F-17" parent="link17" child="link16F" xyz="0.025 0 0" asix="1 0 0"/>
-    <xacro:joint_revolute jointname="joint16-16F" parent="link16F" child="link16" xyz="0.009 0 0.005" asix="0 1 0"/>
-    <xacro:joint_fixed jointname="joint15-16" parent="link16" child="link15" xyz="0 0 -0.011" />
-    <xacro:joint_revolute jointname="joint14F-15" parent="link15" child="link14F" xyz="0 0 -0.025" asix="0 0 1"/>
-    <xacro:joint_revolute jointname="joint14-14F" parent="link14F" child="link14" xyz="-0.005 0 -0.02" asix="0 1 0"/>
-    <xacro:joint_fixed jointname="joint13-14" parent="link14" child="link13" xyz="0 0 -0.015" />
+    <xacro:joint_fixed jointname="joint17_24" parent="link24" child="link17" xyz="0.015 0 0.018" />
+    <xacro:joint_revolute jointname="joint16_17" parent="link17" child="link16" xyz="0.025 0 0" asix="1 0 0"/>
+    <xacro:joint_revolute jointname="joint15_16" parent="link16" child="link15" xyz="0.009 0 0.005" asix="0 1 0"/>
+    <xacro:joint_revolute jointname="joint14_15" parent="link15" child="link14" xyz="0 0 -0.025" asix="0 0 1"/>
+    <xacro:joint_revolute jointname="joint13_14" parent="link14" child="link13" xyz="-0.005 0 -0.02" asix="0 1 0"/>
 
     <!--left  Arm joints  x5-->
-    <xacro:joint_fixed jointname="joint22-24" parent="link24" child="link22" xyz="-0.015 0 0.018" />
-    <xacro:joint_revolute jointname="joint21F-22" parent="link22" child="link21F" xyz="-0.025 0 0" asix="1 0 0"/>
-    <xacro:joint_revolute jointname="joint21-21F" parent="link21F" child="link21" xyz="-0.009 0 0.005" asix="0 1 0"/>
-    <xacro:joint_fixed jointname="joint20-21" parent="link21" child="link20" xyz="0 0 -0.011" />
-    <xacro:joint_revolute jointname="joint19F-20" parent="link20" child="link19F" xyz="0 0 -0.025" asix="0 0 1"/>
-    <xacro:joint_revolute jointname="joint19-19F" parent="link19F" child="link19" xyz="0.005 0 -0.02" asix="0 1 0"/>
-    <xacro:joint_fixed jointname="joint18-19" parent="link19" child="link18" xyz="0 0 -0.015" />
+    <xacro:joint_fixed jointname="joint22_24" parent="link24" child="link22" xyz="-0.015 0 0.018" />
+    <xacro:joint_revolute jointname="joint21_22" parent="link22" child="link21" xyz="-0.025 0 0" asix="1 0 0"/>
+    <xacro:joint_revolute jointname="joint20_21" parent="link21" child="link20" xyz="-0.009 0 0.005" asix="0 1 0"/>
+    <xacro:joint_revolute jointname="joint19_20" parent="link20" child="link19" xyz="0 0 -0.025" asix="0 0 1"/>
+    <xacro:joint_revolute jointname="joint18_19" parent="link19" child="link18" xyz="0.005 0 -0.02" asix="0 1 0"/>
 
     <!--right Leg joints  x6-->
-    <xacro:joint_fixed jointname="joint06-23F" parent="link23F" child="link06" xyz="0.01 -0.03 -0.015" />
-    <xacro:joint_revolute jointname="joint05F-06" parent="link06" child="link05F" xyz="0.01 0 -0.025" asix="0 1 0"/>
-    <xacro:joint_revolute jointname="joint05-05F" parent="link05F" child="link05" xyz="0 0.025 0" asix="1 0 0"/>
-    <xacro:joint_fixed jointname="joint04-05" parent="link05" child="link04" xyz="0 0 -0.03" />
-    <xacro:joint_revolute jointname="joint03F-04" parent="link04" child="link03F" xyz="0 0 -0.03" asix="1 0 0"/>
-    <xacro:joint_revolute jointname="joint03-03F" parent="link03F" child="link03" xyz="0 0 -0.038" asix="1 0 0"/>
-    <xacro:joint_fixed jointname="joint02-03" parent="link03" child="link02" xyz="0 0 -0.03" />
-    <xacro:joint_revolute jointname="joint01F-02" parent="link02" child="link01F" xyz="0 0 -0.03" asix="1 0 0"/>
-    <xacro:joint_revolute jointname="joint01-01F" parent="link01F" child="link01" xyz="0 -0.03 0" asix="0 1 0"/>
+    <xacro:joint_fixed jointname="joint06_23" parent="link23" child="link06" xyz="0.01 -0.03 -0.015" />
+    <xacro:joint_revolute jointname="joint05_06" parent="link06" child="link05" xyz="0.01 0 -0.025" asix="0 1 0"/>
+    <xacro:joint_revolute jointname="joint04_05" parent="link05" child="link04" xyz="0 0.025 0" asix="1 0 0"/>
+    <xacro:joint_revolute jointname="joint03_04" parent="link04" child="link03" xyz="0 0 -0.03" asix="1 0 0"/>
+    <xacro:joint_revolute jointname="joint02_03" parent="link03" child="link02" xyz="0 0 -0.038" asix="1 0 0"/>
+    <xacro:joint_revolute jointname="joint01_02" parent="link02" child="link01" xyz="0 0 -0.03" asix="1 0 0"/>
+
  
     <!--left  Leg joints  x6-->
-    <xacro:joint_fixed jointname="joint12-23F" parent="link23F" child="link12" xyz="-0.01 -0.03 -0.015" />
-    <xacro:joint_revolute jointname="joint11F-12" parent="link12" child="link11F" xyz="-0.01 0 -0.025" asix="0 1 0"/>
-    <xacro:joint_revolute jointname="joint11-11F" parent="link11F" child="link11" xyz="0 0.025 0" asix="1 0 0"/>
-    <xacro:joint_fixed jointname="joint10-11" parent="link11" child="link10" xyz="0 0 -0.03" />
-    <xacro:joint_revolute jointname="joint09F-10" parent="link10" child="link09F" xyz="0 0 -0.03" asix="1 0 0"/>
-    <xacro:joint_revolute jointname="joint09-09F" parent="link09F" child="link09" xyz="0 0 -0.038" asix="1 0 0"/>
-    <xacro:joint_fixed jointname="joint08-09" parent="link09" child="link08" xyz="0 0 -0.03" />
-    <xacro:joint_revolute jointname="joint07F-08" parent="link08" child="link07F" xyz="0 0 -0.03" asix="1 0 0"/>
-    <xacro:joint_revolute jointname="joint07-07F" parent="link07F" child="link07" xyz="0 -0.03 0" asix="0 1 0"/>
+    <xacro:joint_fixed jointname="joint12_23" parent="link23" child="link12" xyz="-0.01 -0.03 -0.015" />
+    <xacro:joint_revolute jointname="joint11_12" parent="link12" child="link11" xyz="-0.01 0 -0.025" asix="0 1 0"/>
+    <xacro:joint_revolute jointname="joint10_11" parent="link11" child="link10" xyz="0 0.025 0" asix="1 0 0"/>
+    <xacro:joint_revolute jointname="joint09_10" parent="link10" child="link09" xyz="0 0 -0.03" asix="1 0 0"/>
+    <xacro:joint_revolute jointname="joint08_09" parent="link09" child="link08" xyz="0 0 -0.038" asix="1 0 0"/>
+    <xacro:joint_revolute jointname="joint07_08" parent="link08" child="link07" xyz="0 0 -0.03" asix="1 0 0"/>
+
 
     <!-- gazebo -->
     <gazebo>
         <plugin name="gazebo_ros_control" filename="libgazebo_ros_control.so">
-            <robotNamespace>robo_zero</robotNamespace>
+            <robotNamespace>robozero</robotNamespace>
         </plugin>
     </gazebo>
 

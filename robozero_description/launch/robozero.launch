@@ -1,0 +1,28 @@
+<launch>
+
+    <param name="robot_description" command="$(find xacro)/xacro.py --inorder '$(find robozero_description)/urdf/robozero_model.xacro'"/>
+
+    <include file="$(find gazebo_ros)/launch/empty_world.launch"></include>
+
+    <node name="rviz" pkg="rviz" type="rviz" args="-d $(find robozero_description)/config/viz.rviz" required="true" />
+    <node pkg="gazebo_ros" 
+        type="spawn_model" 
+        name="spawn_model" 
+        respawn="false" 
+        args="-param robot_description -urdf -model robot" />
+
+    <!-- Load joint controller configurations from YAML file to parameter server -->
+    <rosparam file="$(find robozero_hardware_interface)/config/controller.yaml" command="load"/>
+    
+    <!-- load the controllers -->
+    <!-- <node name="controller_spawner" pkg="controller_manager"
+                    type="spawner" ns="robozero" output="screen" 
+                    args="joint23_24_ctrl joint23F_23_ctrl joint16F_17_ctrl joint16_16F_ctrl joint14F_15_ctrl joint14_14F_ctrl"  />
+     -->
+    <!-- convert joint states to TF transforms for rviz, etc -->
+    <node name="robot_state_publisher" pkg="robot_state_publisher"
+                    type="robot_state_publisher"
+                    respawn="false" output="screen" >
+    </node>
+    
+</launch>
